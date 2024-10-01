@@ -50,6 +50,7 @@ class Setting extends Page implements HasForms
             Forms\Components\TextInput::make('number_whatsapp')->required(),
             Forms\Components\FileUpload::make('icon')->avatar()->image(),
             Forms\Components\FileUpload::make('logo')->image()->imageEditor(),
+            Forms\Components\RichEditor::make('about')->required(),
 
             Forms\Components\Section::make('sosial media')->schema([
                 Forms\Components\TextInput::make('sosmed.facebook_url'),

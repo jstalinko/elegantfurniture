@@ -119,4 +119,18 @@ class JustOrangeController extends Controller
         return redirect("https://wa.me/$phone?text=".urlencode("Hallo, saya tertarik dengan produk ini! \n\n $url"));
         exit;
     }
+
+    public function contact(): \Inertia\Response
+    {
+        $props['globals'] = $this->globals;
+        $data['props'] = $props;
+        return Inertia::render('contact',$data);
+    }
+
+    public function about(): \Inertia\Response
+    {
+        $props['globals'] = $this->globals;
+        $data['props'] = $props;
+        return Inertia::render('contact',$data);
+    }
 }
