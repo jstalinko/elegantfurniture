@@ -1,0 +1,15 @@
+{
+    "site_url": "localhost:8000",
+    "site_name": "JustOrange",
+    "site_description": "a laravel full-stack starterkit",
+    "site_keywords": "Situs Top up Game Termurah dan Terpercaya di Indonesia",
+    "number_whatsapp": "087857580910",
+    "icon": null,
+    "logo": null,
+    "sosmed": {
+        "facebook_url": "https:\/\/facebook.com",
+        "instagram_url": "#",
+        "titktok_url": "#",
+        "whatsapp_url": "#"
+    }
+}
