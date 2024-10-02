@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Contact;
 use App\Models\Product;
 use App\Models\Testimonial;
 use App\Models\Visitor;
@@ -98,7 +99,7 @@ class JustOrangeController extends Controller
                 'platform' => $ad->platform(),
                 'device' => $ad->device() . ' ' . $ad->deviceBrand() . ' ' . $ad->deviceModel(),
                 'latitude' => $req['lat'],
-                'long' => $req['lon'],
+                'longtitude' => $req['lon'],
                 'maps_url' => 'https://maps.google.com/?q=' . $req['lat'], $req['lon'],
             ]
         );
@@ -122,6 +123,7 @@ class JustOrangeController extends Controller
 
     public function contact(): \Inertia\Response
     {
+        $this->globals['title'] = 'Hubungi Kami';
         $props['globals'] = $this->globals;
         $data['props'] = $props;
         return Inertia::render('contact',$data);
@@ -129,8 +131,25 @@ class JustOrangeController extends Controller
 
     public function about(): \Inertia\Response
     {
+        $this->globals['title'] = 'Hubungi Kami';
+
         $props['globals'] = $this->globals;
         $data['props'] = $props;
         return Inertia::render('contact',$data);
+    }
+
+    public function contactSubmit(Request $request): JsonResponse
+    {
+        $req = $request->json()->all();
+
+        $contact = new Contact();
+        $contact->name = $req['name'];
+        $contact->address = $req['address'];
+        $contact->message = $req['message'];
+        $contact->phone = $req['whatsapp'];
+        $contact->save();
+
+
+        return response()->json(['success' => true , 'data' => $req]);
     }
 }

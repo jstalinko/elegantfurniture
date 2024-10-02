@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/update' , [JustOrangeController::class , 'updateVisitor']);
+Route::post('/contact',[JustOrangeController::class , 'contactSubmit']);
