@@ -95,8 +95,8 @@
                     </div>
                     <div class="no-flex">
                         <div
-                            class="min-h-40 md:min-h-[400px] text-lg md:text-xl prose md:prose-lg mt-3"
-                        v-html="props.product.description">
+                            class="min-h-40 md:min-h-[400px] text-lg md:text-xl prose md:prose-lg mt-3">
+                            <RenderMarkdown :source="props.product.description"/>
                         </div>
 
                         <span class="mt-10">
@@ -144,6 +144,8 @@ import { ref } from "vue";
 import { Link } from "@inertiajs/vue3";
 import { imageUrl, wabutton } from "../../utils/helpers";
 import Product from "../Section/Product.vue";
+import RenderMarkdown from "../Section/RenderMarkdown.vue";
+
 const prop = defineProps({ props: Object });
 
 const thumbsSwiper = ref(null);

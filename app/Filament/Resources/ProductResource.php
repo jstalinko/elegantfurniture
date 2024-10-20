@@ -31,17 +31,20 @@ class ProductResource extends Resource
             
                 Forms\Components\TextInput::make('name')
                     ->required(),
-                Forms\Components\RichEditor::make('description')
+                Forms\Components\MarkdownEditor::make('description')
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('main_image')
                     ->image()
+                    ->imageEditor()
                     ->required()
                     ->optimize('webp')
                     ->resize(50)
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('preview_images')
                     ->required()
+                    ->image()
+                    ->imageEditor()
                     ->columnSpanFull()
                     ->optimize('webp')
                     ->resize(50)

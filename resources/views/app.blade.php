@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="dracula">
+<html data-theme="emerald">
 
 <head>
     <meta charset="utf-8" />

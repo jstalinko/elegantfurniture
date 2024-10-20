@@ -13,7 +13,7 @@ export default {
     require('@tailwindcss/typography')
   ],
   daisyui:{
-    themes:['light','dark','synthwave','dracula']
+    themes:['light','dark','synthwave','dracula' , 'emerald','pastel']
   }
 
 }

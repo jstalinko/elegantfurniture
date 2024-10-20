@@ -18,6 +18,15 @@
     "@inertiajs/vue3": "^1.1.0",
     "@tailwindcss/typography": "^0.5.15",
     "@vitejs/plugin-vue": "^5.0.5",
+    "markdown-it": "^14.1.0",
+    "markdown-it-abbr": "^2.0.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-highlightjs": "^4.2.0",
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "markdown-it-toc-done-right": "^4.2.0",
     "path": "^0.12.7",
     "swiper": "^11.1.14"
   }

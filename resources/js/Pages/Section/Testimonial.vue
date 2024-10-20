@@ -21,7 +21,7 @@
               </div>
               <p class="text-gray-500 text-xs">{{ testimonial.alamat }}</p>
             </div>
-            <p class="text-gray-300 text-sm">"{{ testimonial.content }}"</p>
+            <p class="text-gray-600 text-sm">"{{ testimonial.content }}"</p>
           </div>
         </div>
   

@@ -79,11 +79,14 @@
                           </h2>
                       </Link>
                       <b class="font-bold text-xs">
+                        <span v-if="item.price === 0">
+                            Harga hubungi admin
+                        </span>
+                        <span v-else>
                           {{ formatCurrency(item.price) }}
+                        </span>
                       </b>
-                      <p class="text-xs md:text-md">
-                          If a dog chews shoes whose shoes does he choose?
-                      </p>
+                   
 
                       <div class="card-actions justify-end">
                           <Link
