@@ -2,7 +2,7 @@
     <section id="footer" class="mt-10">
         <footer class="footer bg-base-200 text-base-content p-10">
             <aside>
-               <img :src="imageUrl(props.globals.setting.logo)" :alt="'Logo ' + props.globals.setting.site_name" loading="lazy" />
+               <img :src="imageUrl(props.globals.setting.logo)" :alt="'Logo ' + props.globals.setting.site_name" loading="lazy"  class="w-32"/>
                 <p>
                     {{ props.globals.setting.site_name }}
                     <br />
