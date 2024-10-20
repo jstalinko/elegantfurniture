@@ -116,7 +116,7 @@
                         </span>
                         <div class="mt-3">
                             <a
-                            :href="wabutton(props.globals.setting.number_whatsapp,props.globals.base_url+'/product/'+props.product.slug)" 
+                            :href="'/wa-checkout/'+props.product.id" 
                             class="btn btn-primary w-full rounded-full">
                                 <i class="mdi mdi-whatsapp"></i> Pesan Sekarang
                             </a>

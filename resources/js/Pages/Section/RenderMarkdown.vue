@@ -12,7 +12,7 @@ import MarkdownItSub from "markdown-it-sub";
 import MarkdownItSup from "markdown-it-sup";
 import MarkdownItTasklists from "markdown-it-task-lists";
 import MarkdownItTOC from "markdown-it-toc-done-right";
-import {marked} from "marked";
+
 const prop = defineProps({source: String});
 
 const markdown =  new MarkdownIt()
