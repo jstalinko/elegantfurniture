@@ -140,11 +140,12 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import Layout from "../Layout.vue";
-import { ref } from "vue";
+import { ref,defineAsyncComponent } from "vue";
 import { Link } from "@inertiajs/vue3";
 import { imageUrl, wabutton } from "../../utils/helpers";
 import Product from "../Section/Product.vue";
-import RenderMarkdown from "../Section/RenderMarkdown.vue";
+const RenderMarkdown = defineAsyncComponent(() => import('../Section/RenderMarkdown.vue'));
+
 
 const prop = defineProps({ props: Object });
 
