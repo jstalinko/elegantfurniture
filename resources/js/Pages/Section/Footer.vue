@@ -23,7 +23,7 @@
         </footer>
         <footer class="footer bg-neutral text-neutral-content items-center p-4">
             <aside class="grid-flow-col items-center">
-                <img :src="imageUrl(props.globals.setting.logo)" :alt="'Logo ' + props.globals.setting.site_name" loading="lazy" />
+                <img :src="imageUrl(props.globals.setting.logo)" :alt="'Logo ' + props.globals.setting.site_name" loading="lazy" class="w-8" />
                 <p>
                     Copyright © {{ new Date().getFullYear() }} {{ props.globals.setting.site_name }} | PROVIDED BY : PT JEPARA SOLUSI TEKNOLOGI
                 </p>
