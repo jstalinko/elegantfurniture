@@ -1,7 +1,7 @@
 <template>
     <Layout :props="props">
         <div
-            class="container max-w-7xl mx-auto min-h-screen bg-base-200 rounded-full p-8"
+            class="container max-w-7xl mx-auto min-h-screen bg-base-200 rounded-lg p-8"
         >
             <h2 class="text-2xl font-bold text-center mb-6">Hubungi Kami</h2>
             <div class="alert alert-success" v-if="responseSuccess">

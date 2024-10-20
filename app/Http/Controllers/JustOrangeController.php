@@ -131,11 +131,11 @@ class JustOrangeController extends Controller
 
     public function about(): \Inertia\Response
     {
-        $this->globals['title'] = 'Hubungi Kami';
+        $this->globals['title'] = 'Tentang Kami';
 
         $props['globals'] = $this->globals;
         $data['props'] = $props;
-        return Inertia::render('contact',$data);
+        return Inertia::render('about',$data);
     }
 
     public function contactSubmit(Request $request): JsonResponse

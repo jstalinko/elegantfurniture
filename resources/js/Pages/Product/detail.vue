@@ -144,7 +144,7 @@ import { ref,defineAsyncComponent } from "vue";
 import { Link } from "@inertiajs/vue3";
 import { imageUrl, wabutton } from "../../utils/helpers";
 import Product from "../Section/Product.vue";
-const RenderMarkdown = defineAsyncComponent(() => import('../Section/RenderMarkdown.vue'));
+import RenderMarkdown from "../Section/RenderMarkdown.vue";
 
 
 const prop = defineProps({ props: Object });
