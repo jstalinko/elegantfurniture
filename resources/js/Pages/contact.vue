@@ -91,6 +91,24 @@
                     <button type="submit" class="btn btn-primary">Kirim</button>
                 </div>
             </form>
+            <br>
+            <div class="text-center max-w-7xl mx-auto">
+                <h2 class="text-xl"> Anda juga bisa menghubungi kami melalui :</h2>
+                <nav class="grid-flow-col gap-4 justify-self-center">
+    <a v-if="props.globals.setting.sosmed.facebook_url != null" :href="props.globals.setting.sosmed.facebook_url" target="_blank" role="link" aria-label="Hubungi kami via facebook dengan click link ini">
+      <span class="mdi mdi-facebook text-xl md:text-3xl"></span>
+    </a>
+    <a v-if="props.globals.setting.sosmed.instagram_url != null" :href="props.globals.setting.sosmed.instagram_url" target="_blank" role="link" aria-label="Hubungi kami via instagram dengan click link ini">
+      <span class="mdi mdi-instagram text-xl md:text-3xl"></span>
+    </a>
+    <a v-if="props.globals.setting.sosmed.whatsapp_url != null" :href="props.globals.setting.sosmed.whatsapp_url" target="_blank" aria-label="Hubungi kami via whatsapp dengan click link ini">
+      <span class="mdi mdi-whatsapp text-xl md:text-3xl"></span>
+    </a>
+  </nav>
+            </div>
+
+
+        <Product :products="props.products" :categories="props.categories"  />
         </div>
     </Layout>
 </template>
@@ -98,6 +116,7 @@
 <script setup>
 import Layout from "./Layout.vue";
 import { ref } from "vue";
+import Product from "./Section/Product.vue";
 
 const prop = defineProps({ props: Object });
 

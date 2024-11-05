@@ -117,14 +117,25 @@ class JustOrangeController extends Controller
         $phone = config('setting.number_whatsapp');
         $phone = preg_replace("/^08/","628",$phone);
         $phone = str_replace(['-','_',' '],'',$phone);
-        return redirect("https://wa.me/$phone?text=".urlencode("Hallo, saya tertarik dengan produk ini! \n\n $url"));
-        exit;
+
+        $this->globals['title'] = 'Terimakasih minat anda kepada produk kami';
+        $props['globals'] = $this->globals;
+        $props['checkout_url'] = "https://wa.me/$phone?text=".urlencode("Hallo, saya tertarik dengan produk ini! \n\n $url");
+        $props['categories'] = Category::where('active', true)->orderBy('id', 'desc')->get();
+        $props['products'] = Product::where('active', true)->orderBy('id', 'desc')->get();
+        $data['props'] = $props;
+        return Inertia::render('checkout',$data);
+     
+     
     }
 
     public function contact(): \Inertia\Response
     {
         $this->globals['title'] = 'Hubungi Kami';
         $props['globals'] = $this->globals;
+              
+        $props['categories'] = Category::where('active', true)->orderBy('id', 'desc')->get();
+        $props['products'] = Product::where('active', true)->orderBy('id', 'desc')->get();
         $data['props'] = $props;
         return Inertia::render('contact',$data);
     }

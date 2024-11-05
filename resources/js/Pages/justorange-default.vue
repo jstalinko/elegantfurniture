@@ -34,10 +34,10 @@
                                 <p class="py-6">
                                     {{ stripTags(item.description).substr(0,100) }}...
                                 </p>
-                                <a :href="'/wa-checkout/'+item.id" target="_blank" data-btn="click"  class="btn btn-primary rounded-full">
+                                <Link :href="'/wa-checkout/'+item.id"  data-btn="click"  class="btn btn-primary rounded-full">
                                     <i class="mdi mdi-whatsapp"></i> Pesan
                                     Sekarang!
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -99,14 +99,13 @@
                               #{{ tag }}
                       </Link>
                           
-                          <a
+                          <Link
                             :href="'/wa-checkout/'+item.id"
-                            target="_blank"
                               class="btn btn-secondary btn-sm w-full rounded-full mt-2"
                               data-btn="click"
                           >
                               <i class="mdi mdi-whatsapp"></i> Pesan
-                        </a>
+                    </Link>
                       </div>
                   </div>
               </div>
