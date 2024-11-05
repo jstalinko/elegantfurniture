@@ -254,12 +254,12 @@
     "name": "vue"
   },
   "resources/css/app.css": {
-    "file": "assets/app-yO3oPA6I.css",
+    "file": "assets/app-BorW4aWp.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-nP-HuzGF.js",
+    "file": "assets/app-BoT7g22S.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -304,7 +304,7 @@
       "_highlight.js-C1aZ24U6.js"
     ],
     "css": [
-      "assets/app-Cne6VeLE.css"
+      "assets/app-DTfLJ1je.css"
     ]
   }
 }
