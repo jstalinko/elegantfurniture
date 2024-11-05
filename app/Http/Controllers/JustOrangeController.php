@@ -43,6 +43,13 @@ class JustOrangeController extends Controller
         $this->globals['title'] = $props['product']->name;
         $this->globals['preloadImages'] = $props['similiars'];
         $props['globals'] = $this->globals;
+        $sessionKey = '_product_view_'.sha1($request->ip());
+        if(!session()->has($sessionKey)) {
+            $product = Product::where('slug', $request->slug)->first();
+            $product->views += 1;
+            $product->save();
+            session()->put($sessionKey, true);
+        }
 
         $data['props'] = $props;
 
